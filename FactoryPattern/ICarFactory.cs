@@ -37,9 +37,9 @@ public List<string> CreateableCars()
 public ICar CreateCar(string carName)
     {
     if (carName == "Corolla")
-        return new Corolla();
+        return new ToyotaCar(false);
 
-    return new Yaris();
+    return new ToyotaCar(true);
     }
 }
 
@@ -62,9 +62,9 @@ public List<string> CreateableCars()
 public ICar CreateCar(string carName)
     {
     if (carName == "Civic")
-        return new Civic();
+        return new HondaCar(false);
 
-    return new City();
+    return new HondaCar(true);
     }
 }
 

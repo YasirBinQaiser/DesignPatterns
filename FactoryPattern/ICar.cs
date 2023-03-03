@@ -11,38 +11,39 @@ public interface ICar
     string GetCarName();
     }
 
-public class Yaris : ICar
+public class ToyotaCar : ICar
 {
-public string GetCarName()
-    {
-    return "Toyota Yaris";
-    }
-}
+bool UseSmallBody = false;
 
-public class Corolla : ICar
-{
+public ToyotaCar (bool useSmallBody)
+    {
+    UseSmallBody = useSmallBody;
+    }
 public string GetCarName()
     {
+    if (UseSmallBody)
+        return "Toyota Yaris";
+
     return "Toyota Corolla";
     }
 }
 
 
-public class Civic : ICar
+public class HondaCar : ICar
 {
-public string GetCarName()
-    {
-    return "Honda Civic";
-    }
-}
+bool UseSmallBody = false;
 
-public class City : ICar
-{
+public HondaCar (bool useSmallBody)
+    {
+    UseSmallBody = useSmallBody;
+    }
 public string GetCarName()
     {
+    if (UseSmallBody)
+        return "Honda Civic";
+
     return "Honda City";
     }
 }
-
 
 }
